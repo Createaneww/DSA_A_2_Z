@@ -2,12 +2,11 @@
 using namespace std;
 int getLongestSubarray(vector<int>& nums, int k){
    map<long long,int>presummap;
-long long sum=0;
-int maxlen=0;
-for(int i=0;i<nums.size();i++){
-
-  sum+=nums[i];
-  if(sum==k){
+  long long sum=0;
+  int maxlen=0;
+  for(int i=0;i<nums.size();i++){
+    sum+=nums[i];
+    if(sum==k){
     maxlen=max(maxlen,i+1);
   }
   long long rem=sum-k;
