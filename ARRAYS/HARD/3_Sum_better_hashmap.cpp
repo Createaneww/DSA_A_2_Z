@@ -21,6 +21,7 @@ vector<vector<int>> triplet(int n, vector<int> &arr)
     vector<vector<int>> ans(st.begin(), st.end());
     return ans;
 }
+
 int main(){
     vector<int> a = {-1, 0, 1, 2, -1, -4};
     int n = a.size(); 
