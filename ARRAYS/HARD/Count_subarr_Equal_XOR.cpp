@@ -6,7 +6,7 @@ int Count_sub_arr_XOR(vector<int>&arr , int n , int k){
     int XOR = 0;
     int cnt = 0;
     for (int i = 0; i < n; i++)
-    {
+    { // updated
         XOR = XOR^arr[i];
         if(XOR == k)cnt++;
 
