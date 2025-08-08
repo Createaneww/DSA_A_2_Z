@@ -1,41 +1,43 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<vector<int>> triplet(int n, vector<int> &arr)
-{
-    
+vector<vector<int>> ThreeSumBrute(vector<int>&arr){
     set<vector<int>>st;
-    for(int i = 0 ; i<n ; i++){
-        set<int> hashset;
-        for(int j = i+1 ; j<n ; j++){
-            int thirdEle = -(arr[i] + arr[j]);
-            if(hashset.find(thirdEle) != hashset.end()){ // if present in hashset
-                vector<int>temp = {arr[i] , arr[j] , thirdEle};
-                sort(temp.begin() , temp.end());
-                st.insert(temp);
-            }
-            hashset.insert(arr[j]);
-            
+    int n = arr.size();
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i+1; j < n; j++)
+        {
+            for (int k = j+1; k < n; k++)
+            {
+                int sum = arr[i]+arr[j];
+                sum += arr[k];
 
+                if(sum == 0){
+                    vector<int>temp = {arr[i] , arr[j] , arr[k]};
+                    sort(temp.begin() , temp.end());
+                    st.insert(temp);
+                }
+            }
+            
         }
+        
     }
-    vector<vector<int>> ans(st.begin(), st.end());
+    vector<vector<int>>ans(st.begin() , st.end());
     return ans;
+    
 }
 
 int main(){
-    vector<int> a = {-1, 0, 1, 2, -1, -4};
-    int n = a.size(); 
-    vector<vector<int>> result = triplet(n, a);
+    vector<int>arr  = {-1 , 0 , 1 , 2 , -1 , -4};
 
-    // Iterate over the result vector and print each triplet
-    for (int i = 0; i < result.size(); i++) {
-        cout << "["; 
-        for (int j = 0; j < result[i].size(); j++) {
-            cout << result[i][j];
-            // if (j != result[i].size() - 1) {
-            //     cout << ", "; // Print comma and space except for the last element
-            // }
+    vector<vector<int>> result = ThreeSumBrute(arr);
+
+    for(int i = 0 ; i<result.size(); i++){
+        for (int j = 0; j < result[0].size(); j++)
+        {
+            cout<<result[i][j];
         }
-        cout << "]" << endl; // End the triplet with a closing bracket and ne
+        cout<<" ";
+        
     }
 }
