@@ -15,9 +15,9 @@ vector<int>optimal_missing_repeating(vector<int>&arr){
     long long val1 = S-Sn; //x-y
     long long val2 = S2 - S2n; //x^2-y^2
     val2 = val2/val1; // x+y
-    long long x = (val1+val2)/2;
-    long long y = x-val1;
-return {(int)x , (int)y};
+    long long x = (val1+val2)/2; //value of x
+    long long y = x-val1; // value of y
+    return {(int)x , (int)y};
     
 }
 
