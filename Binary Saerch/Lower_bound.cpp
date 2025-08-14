@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int lowerbound(vector<int>&arr , int x){
+int lowerbound(vector<int>&arr , int x){  // tc = o(logn) base 2;
     int n = arr.size();
     int low = 0 , high = n-1;
     int ans = n;
@@ -10,7 +10,7 @@ int lowerbound(vector<int>&arr , int x){
         if(arr[mid] >= x){   // we get the ans look for left for more smaller;
             ans = mid;  //storing index in ans variable
             high = mid-1;
-        }else{
+        }else{ //looking for right
             low = mid+1;
         }
     }
