@@ -18,7 +18,7 @@ int lowerbound(vector<int>&arr , int x){  // tc = o(logn) base 2;
     
 }
 
-
+//upper_bound code
 int uperbound(vector<int>&arr , int x){
     int n = arr.size();
     int low = 0 , high = n-1;
