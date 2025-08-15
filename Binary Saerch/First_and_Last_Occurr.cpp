@@ -24,7 +24,7 @@ vector<int> First_Last_Occur(vector<int> &arr , int target){
     return {lb , Up-1};
 }
 
-//optimal (if you are asked not to use lower and upper bound)
+
 
 //finding first occurrence
 int firstOccur(vector<int>&arr , int target , int n){
