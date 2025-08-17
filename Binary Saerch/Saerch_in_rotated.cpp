@@ -15,7 +15,7 @@ int search(vector<int>&arr , int target){
                 low = mid+1;
             }
         }
-        else{
+        else{ // else right is sorted
             if(arr[mid] <= target && target <= arr[high]){
                 low = mid+1;
             }else{
