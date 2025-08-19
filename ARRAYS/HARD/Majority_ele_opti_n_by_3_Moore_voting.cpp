@@ -19,7 +19,7 @@ vector<int> majorityElement(vector<int> v) {
 			cnt2--;
 		}
 	}
-	// manual check
+	// manual check is important
 	vector<int>ls;
 	int CNT1 = 0 , CNT2 = 0;
 	for(int i = 0;i<v.size() ; i++){
