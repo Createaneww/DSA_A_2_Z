@@ -11,19 +11,17 @@ int Single_Element(vector<int> &arr){
         if(arr[mid] != arr[mid-1] && arr[mid] != arr[mid+1]) return arr[mid];
 
         else if(mid%2 == 0 && arr[mid] == arr[mid+1]  || mid%2 == 1 && arr[mid] == arr[mid-1]){
-            //we are on left
+            //we are on left so eliminate the left half
             low = mid+1;
         }else{
-            //we are on right
+            //we are on right so eliminate the right half
             high = mid-1;
         }
     }
     return -1;
     
 }
-
-
 int main(){
-    vector<int> arr = {1,1,2,2,3,4,4,5,5,6};
+    vector<int> arr = {1,1,2,2,3,3,4,4,5,5,6};
     cout<<Single_Element(arr);
 }
