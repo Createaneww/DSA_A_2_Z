@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// allocating books , split subarr and painter's problem all are same
 int cntsubarr(vector<int>&nums , int mid){
         int cntsubarr = 1, sumarr = 0;
         for(int i = 0 ; i<nums.size() ; i++){
