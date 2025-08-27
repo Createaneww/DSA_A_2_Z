@@ -2,6 +2,7 @@
 using namespace std;
 
 // allocating books , split subarr and painter's problem all are same
+// master these problems
 int cntsubarr(vector<int>&nums , int mid){
         int cntsubarr = 1, sumarr = 0;
         for(int i = 0 ; i<nums.size() ; i++){
