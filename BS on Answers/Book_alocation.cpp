@@ -38,7 +38,7 @@ int countstud(vector<int> &nums  , int mid ){
         return low;
     }
     int main(){
-        int m;
+        int m; //m is the number of student in which books will have to distribute
         cin>>m;
         vector<int>nums = {10,24,32,11};
         cout<<findPages(nums , m);
