@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//book allocation , painter's problem , slip screen
 
 int countstud(vector<int> &nums  , int mid ){
         int student = 1;
