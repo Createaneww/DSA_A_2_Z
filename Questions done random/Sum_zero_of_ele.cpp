@@ -19,5 +19,10 @@ vector<int> sumZero(int n) {
         return ans;
     }
     int main(){
-        
+        int n;
+        cin>>n;
+        vector<int>result = sumZero(n);
+        for(auto it: result){
+            cout<<it<<" ";
+        }
     }
