@@ -19,5 +19,5 @@ using namespace std;
 
     int main(){
         string s = "successes";   //vowels - u=1time , e = 2times max = 2
-        cout<<maxFreqSum(s);      //consonants
-    }
+        cout<<maxFreqSum(s);      //consonants s = 4 times , c=2times max = 4
+    }  // return 2+4
