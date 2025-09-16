@@ -9,7 +9,6 @@ int No_Of_SubStrings(string s){
         }
     }
     return cnt;
-
 }
 int main(){
     string s = "parth";
