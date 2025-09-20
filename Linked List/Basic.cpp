@@ -39,7 +39,21 @@ int lengthofLL(Node*head){
         temp = temp->next;
         cnt++;
     }
-    return cnt;
+    return cnt; 
+}
+
+//search in a LL (will given head and the ele to be check)
+int checkforele(Node* head , int ele){
+    int cnt = 0;
+    Node* temp = head;
+    while (temp)
+    {
+        if(temp->data == ele){
+            return 1;
+        }
+        temp = temp->next;
+    }
+    return 0;
     
 }
 int main(){
@@ -53,5 +67,9 @@ int main(){
     }
     cout<<endl;
     //printing the length of LL
-    cout<<"The length is - "<<lengthofLL(head);
+    cout<<"The length is - "<<lengthofLL(head)<<endl;
+
+
+    //check for ele
+    cout<<checkforele(head , 11);
 }
