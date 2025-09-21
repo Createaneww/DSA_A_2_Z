@@ -18,6 +18,7 @@ struct Node
     }
 };
 
+//Arr to LL
 Node* convertArr2LL(vector<int> &arr){
     Node* head = new Node(arr[0]);
     Node* mover = head;
@@ -56,6 +57,16 @@ int checkforele(Node* head , int ele){
     return 0;
     
 }
+
+//delete the head
+Node* deletehead(Node* head){
+    if(head == NULL) return head;
+    Node* temp = head;
+    head = head->next;
+    free(temp);
+    return head;
+}
+
 int main(){
     vector<int>arr = {2,3,4,56};
     Node* head = convertArr2LL(arr);  //we will get the head data and next pointer
