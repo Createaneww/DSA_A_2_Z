@@ -69,6 +69,6 @@ int main(){
 // head = InsertHead(head , 5);
 // printLL(head);
 
-head = InsertTail(head , 12);
+head = InsertTail(head , 120);
 printLL(head);
 }
