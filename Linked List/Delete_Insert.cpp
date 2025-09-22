@@ -22,7 +22,7 @@ struct Node
 Node* convertArrtoLL(vector<int> &arr){
     Node* head = new Node(arr[0]);
     Node* mover = head;
-    for(int i = 0; i<arr.size() ; i++){
+    for(int i = 1; i<arr.size() ; i++){
         Node* temp = new Node(arr[i]);
         mover->next = temp;
         mover = temp;
@@ -30,10 +30,11 @@ Node* convertArrtoLL(vector<int> &arr){
     return head;
 }
 
-Node* Delete_Insert(Node* head){
+Node* Deletehead(Node* head){
+    if(head == NULL) return head;
     Node* temp = head;
     head = head->next;
-    free(temp);
+    delete temp;
     return head;
 }
 
@@ -46,13 +47,25 @@ void printLL(Node* head){
     cout<<endl;
     
 }
+
+//delete the tail
+Node* Delete_tail(Node*head){
+    if(head == NULL || head->next == NULL) return NULL;
+    Node* temp = head;
+    while(temp->next->next != nullptr){
+        temp = temp->next;
+    }
+    free(temp->next);
+    temp->next = nullptr;
+    return head;
+}
 int main(){
  vector<int> arr = {1,2,3,4,10};
  Node*head = convertArrtoLL(arr);
-Node* temp = head;    //printing whole LL
-    while (temp)
-    {
-        cout<<temp->data<<" ";
-        temp = temp->next;
-    }
+ head = Deletehead(head);
+ printLL(head); 
+
+ Node*tail = Delete_tail(head);
+ printLL(head);
+
 }

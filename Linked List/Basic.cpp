@@ -12,7 +12,7 @@ struct Node
         next = next1;
     }
     public:
-    Node(int data1 ){
+    Node(int data1){
         data = data1;
         next = nullptr;
     }
