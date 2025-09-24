@@ -91,7 +91,7 @@ int main(){
  vector<int> arr = {1,2,3,4,10};
  Node*head = convertArrtoLL(arr);
 
-// head = InsertHead(head , 5);
+// head = InsertHead(head , 5);  //inserting at front
 // printLL(head);
 
 // head = InsertTail(head , 120);
