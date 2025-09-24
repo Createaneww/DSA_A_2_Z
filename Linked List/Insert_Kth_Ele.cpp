@@ -94,7 +94,7 @@ int main(){
 // head = InsertHead(head , 5);  //inserting at front
 // printLL(head);
 
-// head = InsertTail(head , 120);
+// head = InsertTail(head , 120);  //inserting at last
 // printLL(head);
 
 head = InsertvalKth(head , 16 , 1);
