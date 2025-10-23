@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int second_largest(vector<int>&arr, int n)
 {
     int largest = arr[0];
@@ -18,6 +19,7 @@ int second_largest(vector<int>&arr, int n)
     }
     return slargest;
 }
+
 int second_smallest(vector<int>&arr, int n)
 {
     int smallest = arr[0];
