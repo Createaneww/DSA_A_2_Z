@@ -50,7 +50,15 @@ void printLL(Node* head){
 
 //delete the tail
 Node* Delete_tail(Node*head){
-    if(head == NULL || head->next == NULL) return NULL;
+    // if(head == NULL || head->next == NULL) return NULL;
+    // Node* temp = head;
+    // while(temp->next->next != nullptr){
+    //     temp = temp->next;
+    // }
+    // free(temp->next);
+    // temp->next = nullptr;
+    // return head;
+    if(head == NULL || head->next == nullptr) return NULL;
     Node* temp = head;
     while(temp->next->next != nullptr){
         temp = temp->next;
