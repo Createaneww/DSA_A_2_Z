@@ -45,7 +45,7 @@ void printLL(Node* head){
 //Insert ele in the starting
 Node* InsertHead(Node* head , int val){
     Node* temp = new Node(val , head);
-    return temp;
+    return temp;  //temp will be our new head
 }
 //Insert Ele in the ending
 Node* InsertTail(Node* head , int val){
