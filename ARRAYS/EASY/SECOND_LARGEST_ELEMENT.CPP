@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int second_largest(vector<int>&arr, int n)
+int second_largest(vector<int> &arr, int n)
 {
     int largest = arr[0];
     int slargest = INT_MIN;
@@ -20,7 +20,7 @@ int second_largest(vector<int>&arr, int n)
     return slargest;
 }
 
-int second_smallest(vector<int>&arr, int n)
+int second_smallest(vector<int> &arr, int n)
 {
     int smallest = arr[0];
     int ssmallest = INT_MAX;
@@ -38,22 +38,18 @@ int second_smallest(vector<int>&arr, int n)
     }
     return ssmallest;
 }
-// pair<int,int> getSecondOrderElements(vector<int>&arr, int n)
-// {
-//     int slargest = second_largest(arr, n);
-//     int ssmallest = second_smallest(arr, n);
-//     return make_pair(slargest,ssmallest);
-// }
+
 int main()
 {
     int n;
     cin >> n;
-    vector<int>arr(n);
+    vector<int> arr(n);
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
     int slargest = second_largest(arr, n);
     int ssmallest = second_smallest(arr, n);
-    cout<<"Second largest element is:"<<slargest<<endl<<"Second smallest element is:"<<ssmallest;
+    cout << "Second largest element is:" << slargest << endl
+         << "Second smallest element is:" << ssmallest;
 }
