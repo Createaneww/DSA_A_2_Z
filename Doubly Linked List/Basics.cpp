@@ -12,7 +12,7 @@ class Node{
         next = next1;
         back = back1;
     }
-    
+
     public:
     Node(int data1){
         data = data1;
@@ -20,8 +20,18 @@ class Node{
         back = nullptr;
     }
 };
+Node* convertArrtoDll(vector<int>&arr){
+    Node*head = new Node(arr[0]);
+    Node* prev = head;
+    for(int i = 1 ; i<arr.size() ; i++){
+        Node* temp = new Node(arr[i] , nullptr , prev);
+        prev->next = temp;
+        prev = temp;
+    }
+}
 
 int main(){
-
+    vector<int>arr = {1,3,2,4,8};
+    Node* head = convertArrtoDll(arr);
 
 }
