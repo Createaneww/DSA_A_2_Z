@@ -17,7 +17,7 @@ class Node{
     Node(int data1){
         data = data1;
         next = nullptr;
-        back = nullptr;
+        back = nullptr; 
     }
 };
 Node* convertArrtoDll(vector<int>&arr){
@@ -26,12 +26,21 @@ Node* convertArrtoDll(vector<int>&arr){
     for(int i = 1 ; i<arr.size() ; i++){
         Node* temp = new Node(arr[i] , nullptr , prev);
         prev->next = temp;
-        prev = temp;
+        prev = temp;  //this can be also written as "prev = prev->next"
+    }
+    return head;
+}
+
+//print Dll
+void printDll(Node* head){
+    while(head != nullptr){
+        cout<<head->data<<" ";
+        head = head->next;
     }
 }
 
 int main(){
     vector<int>arr = {1,3,2,4,8};
     Node* head = convertArrtoDll(arr);
-
+    printDll(head);
 }
