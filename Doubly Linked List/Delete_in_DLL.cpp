@@ -50,12 +50,28 @@ Node* DeleteHead(Node*head){
     prev->next = nullptr;
     free(prev);
     return head;
-
 }
+//Delete Tail
+Node* DeleteTail(Node*head){
+    if(head == NULL || head->next == nullptr){
+        return NULL;
+    }
+    Node* tail = head;
+    while(tail->next != nullptr){
+        tail = tail->next;
+    }
+    Node*prev = tail->back;
+    prev->next = nullptr;
+    tail->back = nullptr;
+    free(tail);
+    return head;
+}
+
 int main(){
-    vector<int>arr = {1,3,2,4,8};
+    vector<int>arr = {1,3,2,4,8 , 15};
     Node* head = convertArrtoDll(arr);
 
-    head = DeleteHead(head);
+    // head = DeleteHead(head);
+    head = DeleteTail(head);
     printDll(head);
 } 
